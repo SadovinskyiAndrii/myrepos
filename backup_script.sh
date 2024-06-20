@@ -15,4 +15,4 @@ DATE=$(printf "%s_%s" "$DATE_PART" "$TIME_PART")
 BACKUP_FILE="backup_$DATE.tar.gz"
 
 # Створення резервної копії
-tar -czf "$BACKUP_DIR/$BACKUP_FILE" "$SOURCE_DIR"
+tar -czf "$BACKUP_DIR/$BACKUP_FILE" --exclude="*/*.dat" "$SOURCE_DIR"
